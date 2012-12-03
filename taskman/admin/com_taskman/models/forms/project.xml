@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+        <fieldset>
+                <field
+                        name="project_id"
+                        type="hidden"
+                />
+                <field
+                        name="proj_name"
+                        type="text"
+                        label="COM_TASKMAN_TASKMAN_PROJECTNAME_LABEL"
+                        description="COM_TASKMAN_TASKMAN_PROJECTNAME_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                <field
+                        name="proj_members"
+                        type="text"
+                        label="COM_TASKMAN_TASKMAN_PROJECTMEMBERS_LABEL"
+                        description="COM_TASKMAN_TASKMAN_PROJECTMEMBERS_DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                
+                       
+               <field
+                        name="state"
+                        type="text"
+                        label="COM_TASKMAN_TASKMAN_STATE_LABEL"
+                        description="COM_TASKMAN_TASKMAN_STATE__DESC"
+                        size="40"
+                        class="inputbox"
+                        default=""
+                        required="true"
+                />
+                
+                
+        </fieldset>
+</form>
