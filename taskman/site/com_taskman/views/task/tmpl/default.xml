@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+        <layout title="COM_TASKMAN_TASKMAN_VIEW_DEFAULT_TITLE">
+                <message>
+                        <![CDATA[COM_TASKMAN_TASKMAN_VIEW_DEFAULT_DESC]]>
+                </message>
+        </layout>
+        <fields
+                name="request"
+                addfieldpath="/components/com_taskman/models/fields"
+        >
+                <fieldset name="request">
+                        <field
+                                name="task_id" 
+                                type="task"
+                                label="COM_TASKMAN_TASKMAN_FIELD_ID_LABEL"
+                                description="COM_TASKMAN_TASKMAN_FIELD_ID_DESC"	>
+                           
+                                </field>
+                      
+                </fieldset>
+                
+        </fields>
+</metadata>
