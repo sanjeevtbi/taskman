@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.controllerform');
  
 /**
- * HelloWorld Controller
+ * Taskman Controller
  */
 class TaskManControllerCompany extends JControllerForm
 {

@@ -1,23 +1,95 @@
 <?php
 ?>
 <script type="text/javascript">
-	function saveDate(cal) {
-		var data = {
-			task_id: <?php echo $this->item->task_id; ?>,
-			duedate: $(cal).value,
-			};
-		jQuery.ajax({
-			type: "POST",
-			url: "<?php echo JURI::base();?>index.php?option=com_taskman&view=task&task=task.saveDate",
-			data: data,
-			success: function(response)
-			{
-				jQuery("#duedate_result").html(response);
-			}
-		});
-		return false;
+
+function saveTitle() 
+{
+	var datas = {
+		task_id: <?php echo $this->item->task_id; ?>,
+		title: document.getElementById('newtitle').value,
+		};
+	
+	jQuery.ajax({
+		type: "POST",
+		url: "<?php echo JURI::base();?>index.php?option=com_taskman&view=task&task=task.hello",
+		data: datas,
+		success: function(response)
+		{
+			$("#task").html(response);
+		}
+	});
+	return false;
+}
+
+function savenotes() {
+	var data = {
+		task_id: <?php echo $this->item->task_id; ?>,
+		notes: ,
+		};
+	
+	jQuery.ajax({
+		type: "POST",
+		url: "<?php echo JURI::base();?>index.php?option=com_taskman&view=task&task=task.saveDate",
+		data: data,
+		success: function(response)
+		{
+			jQuery("#duedate_result").html(response);
+		}
+	});
+	return false;
+}
+
+
+
+
+function saveDate(cal) {
+	var data = {
+		task_id: <?php echo $this->item->task_id; ?>,
+		duedate: $(cal).value,
+		};
+	
+	jQuery.ajax({
+		type: "POST",
+		url: "<?php echo JURI::base();?>index.php?option=com_taskman&view=task&task=task.saveDate",
+		data: data,
+		success: function(response)
+		{
+			jQuery("#duedate_result").html(response);
+		}
+	});
+	return false;
+}
+
+function hovernote()
+{ 
+	document.getElementById('notes1').style.display='none';
+	document.getElementById('notes2').style.display='block';
+	}	
+function hovernotout()
+{ 
+	document.getElementById('notes1').style.display='block';
+	document.getElementById('notes2').style.display='none';
 	}
+
+function hovers()
+{ 
+	document.getElementById('task').style.display='none';
+
+	document.getElementById('icon').style.display='block'; 
+
+	}
+
+function hoverout()
+{ 
+	document.getElementById('task').style.display='block';
+	document.getElementById('icon').style.display='none'; 
+	
+	}
+
+	
 </script>
+<style type="text/css"> #icon{ display:none }</style>
+<style type="text/css"> #notes2{ display:none }</style>
 <form>
 
 	<div class="row-fluid">
@@ -27,9 +99,10 @@
 				<div class="row-fluid">
 					<div class="span12 ">
 						<h3>
-							<i class="icon-tasks"></i>
-							<?php echo $this->item->title; ?>
+							<div id="task" onmouseover="hovers()"><?php echo $this->item->title; ?></div>
+							<div id="icon"  onmouseout="hoverout()"><input id="newtitle" type="text" value="<?php echo $this->item->title; ?>"><button onclick="saveTitle()">click</button></div>
 						</h3>
+				
 					</div>
 				</div>
 
@@ -38,8 +111,9 @@
 					<div class="span12 muted">
 						<i class="icon-user"></i>
 						<?php echo JText::_('COM_TASKMAN_TASKMAN_NOTES_LABEL');?>
-						<br />
-						<?php echo $this->item->notes; ?>
+						<div id="notes1" onclick="hovernote()"><?php echo $this->item->notes; ?></div>
+						<br/>
+						<div id="notes2"><input id="newnotes" type="text" value="<?php echo $this->item->notes; ?>"><button onclick="savenotes()">click</button></div>
 					</div>
 				</div>
 
@@ -58,26 +132,25 @@
 							<b><?php echo $this->item->assignee; ?> </b>
 						</div>
 					</div>
-
+					<br>
 
 					<div class="row-fluid">
 						<div class="span3 muted">
-							<i class="icon-calendar"></i>
+							<?php 
+							$attribs = Array(
+		'onchange' => 'saveDate(this)',
+		'style'=>'display:none;'
+					);
+	echo JHtml::calendar($this->item->duedate, 'duedate', 'duedate','%Y-%m-%d',$attribs );  ?>
 							<?php echo JText::_('COM_TASKMAN_TASKMAN_DUEDATE_LABEL');?>
 						</div>
 						<div class="span9">
 							<b  id="duedate_result"><?php echo $this->item->duedate; ?></b> 
-							<?php 
-							$attribs = Array(
-									'onchange' => 'saveDate(this)',
-									'style'=>'display:none;'
-							);
-							echo JHtml::calendar($this->item->duedate, 'duedate', 'duedate','%Y-%m-%d',$attribs );  ?>
-							
+													
 						</div>
 					</div>
 
-
+					<br>
 					<div class="row-fluid">
 						<div class="span3 muted">
 							<i class="icon-user"></i>

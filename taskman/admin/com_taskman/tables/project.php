@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.database.table');
  
 /**
- * Hello Table class
+ * Taskman Table class
  */
 class TaskManTableProject extends JTable
 {

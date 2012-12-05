@@ -6,12 +6,12 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
  
 /**
- * HelloWorld View
+ * Taskman View
  */
 class TaskManViewTask extends JViewLegacy
 {
         /**
-         * display method of Hello view
+         * display method of Taskman view
          * @return void
          */
         public function display($tpl = null) 
@@ -44,7 +44,7 @@ class TaskManViewTask extends JViewLegacy
         protected function addToolBar() 
         {
                 $input = JFactory::getApplication()->input;
-                $input->set('hidemainmenu', true);
+                //$input->set('hidemainmenu', true);
                 $isNew = ($this->item->task_id == 0);
                 JToolBarHelper::title($isNew ? JText::_('COM_TASKMAN_MANAGER_TASKMAN_NEW')
                                              : JText::_('COM_TASKMAN_MANAGER_TASKMAN_EDIT'));

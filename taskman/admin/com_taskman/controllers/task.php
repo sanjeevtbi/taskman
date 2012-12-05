@@ -6,14 +6,15 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.controllerform');
  
 /**
- * HelloWorld Controller
+ * Taskman Controller
  */
 class TaskManControllerTask extends JControllerForm
 {
 	
-  function saveDate(){
+function saveDate(){
   	$post = JRequest::get('post');
-  	
+  	//print_r($post);
+  //	exit;
   	$model= $this->getModel();
   	
   	$row = $model->getTable();
@@ -26,4 +27,24 @@ class TaskManControllerTask extends JControllerForm
   	echo $post['duedate'];
   	exit;
   }
+  
+  function hello(){
+  	
+  	$post = JRequest::get('post');
+  	//print_r($post);
+  	//exit;
+  	$model= $this->getModel();
+  	 
+  	$row = $model->getTable();
+  	$row->load($post['task_id']);
+  	//replace the db duedate row by POSTED value
+  	$row->title = $post['title'];
+  	//save the values
+  	$row->store();
+  	//display the date
+  	echo $post['title'];
+  	exit;
+  }
+  
+  
 }

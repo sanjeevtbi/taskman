@@ -6,12 +6,12 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.view');
  
 /**
- * TaskManView
+ * TaskMan View
  */
 class TaskManViewProject extends JViewLegacy
 {
         /**
-         * display method of TaskManView 
+         * display method of TaskMan View 
          * @return void
          */
         public function display($tpl = null) 

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <metadata>
-        <layout title="COM_HELLODEMO_HELLOWORLD_VIEW_DEFAULT_TITLE">
+        <layout title="COM_TASKMAN_TASKMAN_VIEW_DEFAULT_TITLE">
                 <message>
-                        <![CDATA[COM_HELLOWORLD_HELLOWORLD_VIEW_DEFAULT_DESC]]>
+                        <![CDATA[COM_TASKMAN_TASKMAN_VIEW_DEFAULT_DESC]]>
                 </message>
         </layout>
         <fields
@@ -13,8 +13,8 @@
                         <field
                                 name="id" 
                                 type="text"
-                                label="COM_HELLOWORLD_HELLOWORLD_FIELD_ID_LABEL"
-                                description="COM_HELLOWORLD_HELLOWORLD_FIELD_ID_DESC"	>
+                                label="COM_TASKMAN_TASKMAN_FIELD_ID_LABEL"
+                                description="COM_TASKMAN_TASKMAN_FIELD_ID_DESC"	>
                            
                                 </field>
                       

@@ -6,7 +6,7 @@ defined('_JEXEC') or die('Restricted access');
 jimport('joomla.application.component.modeladmin');
  
 /**
- * HelloWorld Model
+ * Taskman Model
  */
 class TaskManModelCompany extends JModelAdmin
 {

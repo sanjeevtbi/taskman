@@ -7,7 +7,7 @@ jimport('joomla.form.helper');
 JFormHelper::loadFieldClass('list');
  
 /**
- * HelloWorld Form Field class for the HelloWorld component
+ * Taskman Form Field class for the   Taskman  component
  */
 class JFormFieldTask extends JFormFieldList
 {

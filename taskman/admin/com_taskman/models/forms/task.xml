@@ -29,13 +29,12 @@
                 />
                 <field
                         name="asignee"
-                        type="list"
+                        type="text"
                         label="COM_TASKMAN_TASKMAN_ASSIGNEE_LABEL"
                         description="COM_TASKMAN_TASKMAN_ASSIGNEE_DESC"
                         default=""
                         required="true">
-                        <option value="1">BALA</option>
-						<option value="0">SANJEEV</option> </field>
+                         </field>
                        
                <field
                         name="company"

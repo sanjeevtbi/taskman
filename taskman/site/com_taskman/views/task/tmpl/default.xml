@@ -2,7 +2,7 @@
 <metadata>
         <layout title="COM_TASKMAN_TASKMAN_VIEW_DEFAULT_TITLE">
                 <message>
-                        <![CDATA[COM_TASKMAN_TASKMAN_VIEW_DEFAULT_DESC]]>
+                        <![CDATA[Message]]>
                 </message>
         </layout>
         <fields
@@ -13,8 +13,8 @@
                         <field
                                 name="task_id" 
                                 type="task"
-                                label="COM_TASKMAN_TASKMAN_FIELD_ID_LABEL"
-                                description="COM_TASKMAN_TASKMAN_FIELD_ID_DESC"	>
+                                label="Label"
+                                description="Description"	>
                            
                                 </field>
                       
