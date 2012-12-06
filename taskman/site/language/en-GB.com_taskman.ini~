@@ -65,25 +65,9 @@ TASKMAN_MSGS_ PROJECT ID="Project Id"
 TASKMAN_MSGS_PROJECT NAME="Project Name"
 TASKMAN_MSGS_PROJECT MEMBERS="Project Members"
 TASKMAN_MSGS_STATE="State"
-COM_TASKMAN_TASKMAN_FIELD_ID_LABEL="Id"
-COM_TASKMAN_TASKMAN_VIEW_DEFAULT_TITLE="Title"
+COM_TASKMAN_TASKMAN_VIEW_DEFAULT_DESC="Title"
+COM_HELLODEMO_HELLOWORLD_VIEW_DEFAULT_TITLE ="Title"
+COM_HELLOWORLD_HELLOWORLD_VIEW_DEFAULT_DESC="View"
 
-
-
-;COMMON TASKS
-
-COM_TASKMAN_N_ITEMS_ARCHIVED="%d tasks successfully archived"
-COM_TASKMAN_N_ITEMS_ARCHIVED_1="%d task successfully archived"
-COM_TASKMAN_N_ITEMS_CHECKED_IN_0="No task successfully checked in"
-COM_TASKMAN_N_ITEMS_CHECKED_IN_1="%d task successfully checked in"
-COM_TASKMAN_N_ITEMS_CHECKED_IN_MORE="%d tasks successfully checked in"
-COM_TASKMAN_N_ITEMS_DELETED="%d tasks successfully deleted"
-COM_TASKMAN_N_ITEMS_DELETED_1="%d task successfully deleted"
-COM_TASKMAN_N_ITEMS_PUBLISHED="%d tasks successfully published"
-COM_TASKMAN_N_ITEMS_PUBLISHED_1="%d task successfully published"
-COM_TASKMAN_N_ITEMS_TRASHED="%d tasks successfully trashed"
-COM_TASKMAN_N_ITEMS_TRASHED_1="%d task successfully trashed"
-COM_TASKMAN_N_ITEMS_UNPUBLISHED="%d tasks successfully unpublished"
-COM_TASKMAN_N_ITEMS_UNPUBLISHED_1="%d task successfully unpublished"
 
 

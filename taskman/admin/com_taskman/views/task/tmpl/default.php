@@ -5,7 +5,7 @@
 function saveTitle() 
 {
 	var datas = {
-		task_id: <?php echo $this->item->task_id; ?>,
+		task_id: document.getElementById('newtitle').value,
 		title: document.getElementById('newtitle').value,
 		};
 	
@@ -21,30 +21,14 @@ function saveTitle()
 	return false;
 }
 
-function savenotes() {
-	var data = {
-		task_id: <?php echo $this->item->task_id; ?>,
-		notes: ,
-		};
-	
-	jQuery.ajax({
-		type: "POST",
-		url: "<?php echo JURI::base();?>index.php?option=com_taskman&view=task&task=task.saveDate",
-		data: data,
-		success: function(response)
-		{
-			jQuery("#duedate_result").html(response);
-		}
-	});
-	return false;
-}
+
 
 
 
 
 function saveDate(cal) {
 	var data = {
-		task_id: <?php echo $this->item->task_id; ?>,
+		task_id: <?php echo $item->task_id; ?>,
 		duedate: $(cal).value,
 		};
 	
